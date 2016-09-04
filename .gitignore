@@ -1,18 +1,10 @@
-
-#.idea/.name
-#.idea/codeStyleSettings.xml
-#.idea/compiler.xml
-#.idea/copyright/
-#.idea/libraries/
-#.idea/misc.xml
-#.idea/modules.xml
-#.idea/uiDesigner.xml
-#.idea/workspace.xml
-.idea/vcs.xml
 Comparison table.txt
 Comparison table.xls
 HomeworksEE.iml
 src/main/resources/
-src/test/
+#src/test//
 target/
 .idea*
+/src/main/java/other/
+/.idea/
+/src/test/java/module01/

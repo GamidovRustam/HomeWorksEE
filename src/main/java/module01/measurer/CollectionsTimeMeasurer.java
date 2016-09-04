@@ -4,7 +4,6 @@ import java.util.*;
 
 public class CollectionsTimeMeasurer {
     private double start;
-    private double averageTime;
 
     public double timeMillisOfAdd(List<Integer> list, int collectionCapacity, int numberOfMeasurements) {
         double totalResultTime = 0;
@@ -17,7 +16,7 @@ public class CollectionsTimeMeasurer {
             totalResultTime += System.nanoTime() - start;
         }
         list.clear();
-        return averageTime = convertNanoTimeToMillis(countAverageTime(totalResultTime, numberOfMeasurements));
+        return convertNanoTimeToMillis(countAverageTime(totalResultTime, numberOfMeasurements));
     }
 
     public double timeMillisOfAdd(Set<Integer> set, int collectionCapacity, int numberOfMeasurements) {
@@ -31,7 +30,7 @@ public class CollectionsTimeMeasurer {
             totalResultTime += (double) System.nanoTime() - start;
         }
         set.clear();
-        return averageTime = convertNanoTimeToMillis(countAverageTime(totalResultTime, numberOfMeasurements));
+        return convertNanoTimeToMillis(countAverageTime(totalResultTime, numberOfMeasurements));
     }
 
     public double timeMillisOfListIteratorAdd(List<Integer> list, int collectionCapacity, int numberOfMeasurements) {
@@ -45,7 +44,7 @@ public class CollectionsTimeMeasurer {
             totalResultTime += System.nanoTime() - start;
         }
         list.clear();
-        return averageTime = convertNanoTimeToMillis(countAverageTime(totalResultTime, numberOfMeasurements));
+        return convertNanoTimeToMillis(countAverageTime(totalResultTime, numberOfMeasurements));
     }
 
     public double timeMillisOfRemove(Collection<Integer> collection, int collectionCapacity, int numberOfMeasurements) {
@@ -60,7 +59,7 @@ public class CollectionsTimeMeasurer {
             totalResultTime += System.nanoTime() - start;
         }
         collection.clear();
-        return averageTime = convertNanoTimeToMillis(countAverageTime(totalResultTime, numberOfMeasurements));
+        return convertNanoTimeToMillis(countAverageTime(totalResultTime, numberOfMeasurements));
     }
 
     public double timeMillisOfListIteratorRemove(List<Integer> list, int collectionCapacity, int numberOfMeasurements) {
@@ -77,7 +76,7 @@ public class CollectionsTimeMeasurer {
             listIterator.remove();
             totalResultTime += System.nanoTime() - start;
         }
-        return averageTime = convertNanoTimeToMillis(countAverageTime(totalResultTime, numberOfMeasurements));
+        return convertNanoTimeToMillis(countAverageTime(totalResultTime, numberOfMeasurements));
     }
 
     public double timeMillisOfPopulate(Collection collection, int collectionCapacity, int numberOfMeasurements) {
@@ -89,7 +88,7 @@ public class CollectionsTimeMeasurer {
             totalResultTime += System.nanoTime() - start;
             collection.clear();
         }
-        return averageTime = convertNanoTimeToMillis(countAverageTime(totalResultTime, numberOfMeasurements));
+        return convertNanoTimeToMillis(countAverageTime(totalResultTime, numberOfMeasurements));
     }
 
     public double timeMillisOfContains(Collection<Integer> collection, int collectionCapacity, int numberOfMeasurements) {
@@ -103,7 +102,7 @@ public class CollectionsTimeMeasurer {
             collection.contains(i);
             totalResultTime += System.nanoTime() - start;
         }
-        return averageTime = convertNanoTimeToMillis(countAverageTime(totalResultTime, numberOfMeasurements));
+        return convertNanoTimeToMillis(countAverageTime(totalResultTime, numberOfMeasurements));
     }
 
     public double timeMillisOfGet(List<Integer> list, int collectionCapacity, int numberOfMeasurements) {
@@ -117,7 +116,7 @@ public class CollectionsTimeMeasurer {
             list.get(i);
             totalResultTime += System.nanoTime() - start;
         }
-        return averageTime = convertNanoTimeToMillis(countAverageTime(totalResultTime, numberOfMeasurements));
+        return convertNanoTimeToMillis(countAverageTime(totalResultTime, numberOfMeasurements));
     }
 
     private void populateCollection(Collection collection, int capacity) {
@@ -140,5 +139,4 @@ public class CollectionsTimeMeasurer {
     private double countAverageTime(double totalResult, int numberOfMeasurements) {
         return totalResult / numberOfMeasurements;
     }
-
 }
