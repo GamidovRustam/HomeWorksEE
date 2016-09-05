@@ -2,10 +2,8 @@ Comparison table.txt
 Comparison table.xls
 HomeworksEE.iml
 src/main/resources/
-#src/test//
 target/
 .idea*
 /src/main/java/other/
 /.idea/
 /src/test/java/module01/
-src/test/
