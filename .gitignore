@@ -8,3 +8,4 @@ target/
 /src/main/java/other/
 /.idea/
 /src/test/java/module01/
+src/test/
