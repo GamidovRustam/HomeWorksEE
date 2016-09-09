@@ -7,11 +7,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NumberExecutor implements Executor<Number> {
+    private final List<Task> tasks = new ArrayList<>();
+    private final List<Task> validResults = new ArrayList<>();
+    private final List<Task> invalidResults = new ArrayList<>();
     private boolean isExecuted = false;
     private Validator validator;
-    private List<Task> tasks = new ArrayList<>();
-    private List<Task> validResults = new ArrayList<>();
-    private List<Task> invalidResults = new ArrayList<>();
 
     public NumberExecutor() {
         this.validator = new DefaultValidator();

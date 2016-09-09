@@ -3,14 +3,31 @@ package module02.task.util;
 import static java.lang.Math.random;
 
 public class RandomValues {
-    private static final int MULTIPLIER = 100;
+    private int multiplier;
+    private final int DEFAULT_MULTIPLIER = 100;
 
-    public static int getRandomIntValue() {
-        return (int) (MULTIPLIER * random());
+    public RandomValues() {
+        this.multiplier = DEFAULT_MULTIPLIER;
     }
 
-    public static long getRandomLongValue() {
-        return (long) (MULTIPLIER * random());
+    public RandomValues(int multiplier) {
+        this.multiplier = multiplier;
+    }
+
+    public int getIntValue() {
+        return (int) (multiplier * random());
+    }
+
+    public long getLongValue() {
+        return (long) (multiplier * random());
+    }
+
+    public int getMultiplier() {
+        return multiplier;
+    }
+
+    public void setMultiplier(int multiplier) {
+        this.multiplier = multiplier;
     }
 }
 

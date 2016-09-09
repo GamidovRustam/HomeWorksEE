@@ -1,8 +1,8 @@
 package module02.task;
 
 public class IntegerTask implements Task<Integer> {
-    private int a;
-    private int b;
+    private final int a;
+    private final int b;
     private int result;
 
     public IntegerTask(int a, int b) {

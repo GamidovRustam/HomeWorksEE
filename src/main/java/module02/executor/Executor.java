@@ -6,7 +6,7 @@ import module02.validator.Validator;
 import java.util.List;
 
 public interface Executor <T> {
-    // Добавить таск на выполнение. Результат таска будет доступен через метод getValidResults().
+    // Добавить таск на выполнение. Результат таска будет доступен через метод printValidResults().
     // Бросает Эксепшн если уже был вызван метод execute()
     void addTask(Task<? extends T> task) throws IllegalStateException;
 

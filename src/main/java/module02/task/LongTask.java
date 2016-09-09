@@ -1,8 +1,8 @@
 package module02.task;
 
 public class LongTask implements Task {
-    private long a;
-    private long b;
+    private final long a;
+    private final long b;
     private long result;
 
     public LongTask(long a, long b) {
@@ -16,12 +16,12 @@ public class LongTask implements Task {
     }
 
     @Override
-    public Object getResult() {
+    public Long getResult() {
         return result;
     }
 
     @Override
     public String toString() {
-        return getResult().toString() + "L";
+        return getResult() + "L";
     }
 }
