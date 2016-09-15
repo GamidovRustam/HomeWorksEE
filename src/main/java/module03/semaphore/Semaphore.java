@@ -1,10 +1,10 @@
-package module03;
+package module03.semaphore;
 
 public interface Semaphore {
     // Запрашивает разрешение.
     // Если есть свободное захватывает его.
     // Если нет - приостанавливает поток до тех пор пока не появится свободное разрешение.
-    public void acquire() throws InterruptedException;
+    public void acquire();
 
     // Запрашивает переданое количество разрешений.
     // Если есть переданое количество свободных разрешений захватывает их.
@@ -12,7 +12,7 @@ public interface Semaphore {
     public void acquire(int permits);
 
     // Отпускает разрешение возвращая его семафору.
-    public void release() throws InterruptedException;
+    public void release();
 
     // Отпускает переданое количество разрешений возварщая их семафору.
     public void release(int permits);
