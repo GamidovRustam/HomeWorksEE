@@ -4,18 +4,16 @@ import module03.semaphore.SemaphoreImpl;
 
 public class Producer extends Thread {
     private final SemaphoreImpl semaphore;
-    private final int permits;
     private final String name;
-    private final int workSteps = 3;
 
     public Producer(String name, SemaphoreImpl semaphore) {
         this.name = name;
         this.semaphore = semaphore;
-        this.permits = this.semaphore.getPermits();
     }
 
     @Override
     public void run() {
+        int workSteps = 3;
         acquire();
         System.out.println(name + " acquired");
         try {
